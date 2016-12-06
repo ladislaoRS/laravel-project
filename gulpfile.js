@@ -13,7 +13,19 @@ require('laravel-elixir-vue-2');
  |
  */
 
+// elixir(mix => {
+//     mix.sass('app.scss')
+//        .webpack('app.js');
+// });
 elixir(mix => {
     mix.sass('app.scss')
-       .webpack('app.js');
+    	.scripts([
+    		'libs/sweetalert-dev.js',
+    		'libs/lity.js'
+    	], './public/js/libs.js')
+    	.styles([
+    		'libs/sweetalert.css',
+    		'libs/lity.css'
+    	], './public/css/libs.css')
+    	.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
 });

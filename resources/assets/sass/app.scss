@@ -1,9 +1,31 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:300,400,600);
 
 // Variables
 @import "variables";
 
+//Icons
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+	padding-top: 70px;
+}
+
+img {
+	max-width: 100%;
+	// border: 1px solid #ddd;
+	// border-radius: 10px;
+	// padding: 5px; 	
+}
+
+.gallery__image {
+	margin-bottom: 1.5em;
+}
+
+.panel-default > .panel-heading {
+	color: inherit;
+}
