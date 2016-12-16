@@ -1,21 +1,22 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('content')
-    
+
+<div class="pages">
+
     <ol class="breadcrumb">
-      <li class="active">Home</li>
+      <li><a href="/home">HOME</a></li>
+      <li class="active">CONTACT</li>
     </ol>
-
-    <div class="container">
-
-        <h1>Your Dashboard</h1>
+    
+    <h1>Contact</h1>
         {{-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
+                    <div class="panel-heading">About Us</div>
 
                     <div class="panel-body">
-                        You are logged in!
+                        Here goes the body content
                     </div>
                 </div>
             </div>

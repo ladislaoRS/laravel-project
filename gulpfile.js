@@ -25,7 +25,8 @@ elixir(mix => {
     	], './public/js/libs.js')
     	.styles([
     		'libs/sweetalert.css',
-    		'libs/lity.css'
-    	], './public/css/libs.css')
-    	.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
+    		'libs/lity.css',
+            'libs/landing-page.css'
+    	], './public/css/libs.css');
+    	// .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
 });

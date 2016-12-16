@@ -17,13 +17,17 @@ $brand-warning: #cbb956;
 $brand-danger:  #bf5329;
 
 // Typography
-$font-family-sans-serif: "Oxygen", sans-serif;
+//$font-family-sans-serif: "Oxygen", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
 $text-color: #636b6f;
 
 // Navbar
-$navbar-default-bg: #fff;
+$navbar-inverse-bg: #161423;
+$navbar-height:	64px !default;
+$navbar-inverse-link-border-bottom-color-hover:		2px solid #31708F;
+$navbar-inverse-link-border-bottom-color-active:	2px solid #3097D1;
+
 
 // Buttons
 $btn-default-color: $text-color;

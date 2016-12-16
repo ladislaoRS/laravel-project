@@ -1,24 +1,25 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('content')
-	<h1>Selling Your Home?</h1>
+	<div class="pages">
+		<h1>Selling Your Home?</h1>
 
-	<hr>
+		<hr>
 
-	
-		<form method="POST" action="/flyers" enctype="multipart/form-data">
-			@include('flyers.form')
+		
+			<form method="POST" action="/flyers" enctype="multipart/form-data">
+				@include('flyers.form')
 
-			@if(count($errors) > 0)
-				<div class="alert alert-danger">
-					<ul>
-					    @foreach($errors->all() as $error)
-					    	<li>{{ $error }}</li>
-					    @endforeach
-					</ul>
-				</div>
-			@endif
+				@if(count($errors) > 0)
+					<div class="alert alert-danger">
+						<ul>
+						    @foreach($errors->all() as $error)
+						    	<li>{{ $error }}</li>
+						    @endforeach
+						</ul>
+					</div>
+				@endif
 
-		</form>
-
+			</form>
+	</div>
 @stop

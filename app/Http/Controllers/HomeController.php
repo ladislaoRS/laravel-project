@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('pages.home');
     }
 
     /**
@@ -34,7 +34,7 @@ class HomeController extends Controller
      **/
     function home()
     {
-        return view('pages.home');
+        return view('pages.welcome');
     }
 
     /**
@@ -45,7 +45,7 @@ class HomeController extends Controller
      **/
     function about()
     {
-        return view('about');
+        return view('pages.about');
     }
 
     /**
@@ -56,6 +56,6 @@ class HomeController extends Controller
      **/
     function contact()
     {
-        return view('contact');
+        return view('pages.contact');
     }
 }

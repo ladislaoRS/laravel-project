@@ -1,6 +1,12 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('content')
+	<div class="pages">
+		<ol class="breadcrumb">
+	      <li><a href="/home">HOME</a></li>
+	      <li class="active">FLYERS</li>
+	    </ol>
+	</div>
 	<div class="row">
 		<div class="col-md-6">
 			<h1>List of Flyers</h1>
