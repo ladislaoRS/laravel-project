@@ -31,7 +31,10 @@
 						<hr>
 
 						{{-- Uploading Photos --}}
-						<form id="addPhotosForm" action="{{ photos_path($flyer) }}" method="POST" class="dropzone">
+						<form id="addPhotosForm" 
+						action="{{ photos_path($flyer) }}" 
+						method="POST" class="dropzone"
+						>
 							{{ csrf_field() }}
 						</form>
 					@endif

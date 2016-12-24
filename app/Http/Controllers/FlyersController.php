@@ -7,8 +7,7 @@ use App\Photo;
 use Illuminate\Http\Request;
 use App\Http\Requests\FlyerRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\ChangeFlyerRequest;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+use App\Http\Requests\AddFlyerRequest;
 
 class FlyersController extends Controller
 {
@@ -78,27 +77,28 @@ class FlyersController extends Controller
      * Apply a photo to the referenced flyer.
      * @param string  $zip
      * @param string  $street
-     * @param Request $request
+     * @param AddFlyerRequest $request
      * @author 
      **/
-    public function addPhoto($zip, $street, ChangeFlyerRequest $request)
+    public function addPhoto($zip, $street, AddFlyerRequest $request)
     {
         
-        $photo = $this->makePhoto($request->file('photo'));
+        $photo = Photo::fromFile($request->file('photo'));
+        // $photo = $this->makePhoto($request->file('photo'));
 
         Flyer::locatedAt($zip, $street)->addPhoto($photo);
     }
 
-    /**
-     * undocumented function
-     *
-     * @return void
-     * @author 
-     **/
-    public function makePhoto(UploadedFile $file) 
-    {
+    // /**
+    //  * undocumented function
+    //  *
+    //  * @return void
+    //  * @author 
+    //  **/
+    // public function makePhoto(UploadedFile $file) 
+    // {
 
-        return Photo::named($file->getClientOriginalName())
-            ->move($file);
-    }
+    //     return Photo::named($file->getClientOriginalName())
+    //         ->move($file);
+    // }
 }
